@@ -1,0 +1,17 @@
+{"level":"info","message":"/api/cart - {}","service":"request-logging"}
+{"level":"info","message":"/api/cart - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?userID=1&productID=1&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?userID=1&productID=3&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products - {}","service":"request-logging"}
+{"level":"info","message":{"originalUrl":"/api/products","requestBody":{},"timestamp":"2024-02-24T06:46:00.555Z"},"timestamp":"2024-02-24T06:46:00.556Z"}
+{"level":"info","message":{"originalUrl":"/api/products/rate?userID=1&productID=3&rating=4","requestBody":{},"timestamp":"2024-02-24T06:53:40.282Z"},"timestamp":"2024-02-24T06:53:40.283Z"}
+{"level":"info","message":{"originalUrl":"/api/products/rate?userID=1&productID=3&rating=4","requestBody":{},"timestamp":"2024-02-24T06:53:58.039Z"},"timestamp":"2024-02-24T06:53:58.039Z"}
+{"level":"info","message":{"originalUrl":"/api/products/rate?userID=1&productID=3&rating=4","requestBody":{},"timestamp":"2024-02-24T06:54:35.771Z"},"timestamp":"2024-02-24T06:54:35.772Z"}
+{"level":"info","message":{"originalUrl":"/api/products/rate?userID=1&productID=3&rating=4","requestBody":{},"timestamp":"2024-02-24T07:18:15.859Z"},"timestamp":"2024-02-24T07:18:15.860Z"}
+{"level":"info","message":{"originalUrl":"/api/products/rate?userID=11&productID=3&rating=4","requestBody":{},"timestamp":"2024-02-24T07:18:33.281Z"},"timestamp":"2024-02-24T07:18:33.282Z"}
+{"level":"info","message":{"originalUrl":"/api/products/rate?userID=11&productID=3&rating=4","requestBody":{},"timestamp":"2024-02-24T07:19:41.369Z"},"timestamp":"2024-02-24T07:19:41.369Z"}
+{"level":"info","message":{"originalUrl":"/api/products/rate?userID=1&productID=38&rating=4","requestBody":{},"timestamp":"2024-02-24T07:20:05.416Z"},"timestamp":"2024-02-24T07:20:05.416Z"}
