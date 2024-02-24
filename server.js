@@ -11,21 +11,10 @@ import cartRouter from './src/features/cart/cartItems.routes.js';
 import apiDocs from './swagger.json' assert { type: 'json' };
 import loggerMiddleware from './src/middlewares/logger.middleware.js';
 import ApplicationError from './src/errorHandler/applicationError.js';
+import connectToMongoDB from './src/config/mongodb.js';
 
 // 2. Create a Server
 const server = express();
-
-// CORS policy configuration using "Header"
-// server.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header('Access-Control-Allow-Headers', '*');
-//   res.header('Access-Control-Allow-Methods', '*');
-//   // return OK for preflight request.
-//   if (req.method == 'OPTIONS') {
-//     return res.sendStatus(200);
-//   }
-//   next();
-// });
 
 // CORS policy configuration using "cors-lib"
 server.use(cors());
@@ -66,5 +55,7 @@ server.use((req, res) => {
 
 // 5. Specify Port.
 const PORT = 3200;
-server.listen(PORT);
-console.log('Server is running at', PORT);
+server.listen(PORT, () => {
+  console.log('Server is running at', PORT);
+  connectToMongoDB();
+});
