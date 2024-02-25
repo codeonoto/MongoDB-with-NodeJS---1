@@ -26,3 +26,9 @@
 {"level":"info","message":{"originalUrl":"/api/users/signup","requestBody":{"email":"custom@ecom.in","name":"Seller User","password":"noob","type":"Seller"},"timestamp":"2024-02-24T10:55:12.206Z"},"timestamp":"2024-02-24T10:55:12.206Z"}
 {"level":"info","message":{"originalUrl":"/api/users/signup","requestBody":{"email":"eller3@ecom.in","name":"Seller User 3","password":"noob","type":"Seller"},"timestamp":"2024-02-25T05:05:59.245Z"},"timestamp":"2024-02-25T05:05:59.246Z"}
 {"level":"info","message":{"originalUrl":"/api/users/signin","requestBody":{"email":"seller3@ecom.in","password":"noob"},"timestamp":"2024-02-25T05:15:02.484Z"},"timestamp":"2024-02-25T05:15:02.485Z"}
+{"level":"info","message":{"originalUrl":"/api/users/signin","requestBody":{"email":"seller4@ecom.in","name":"Seller User 4","password":"noob4","type":"Seller"},"timestamp":"2024-02-25T05:43:33.084Z"},"timestamp":"2024-02-25T05:43:33.085Z"}
+{"level":"info","message":{"originalUrl":"/api/users/signup","requestBody":{"email":"seller4@ecom.in","name":"Seller User 4","password":"noob4","type":"Seller"},"timestamp":"2024-02-25T05:43:41.879Z"},"timestamp":"2024-02-25T05:43:41.879Z"}
+{"level":"info","message":{"originalUrl":"/api/users/signin","requestBody":{"email":"seller4@ecom.in","password":"noob4"},"timestamp":"2024-02-25T05:56:16.278Z"},"timestamp":"2024-02-25T05:56:16.278Z"}
+{"level":"info","message":{"originalUrl":"/api/users/signin","requestBody":{"email":"seller4@ecom.in","password":"noob42"},"timestamp":"2024-02-25T05:56:33.995Z"},"timestamp":"2024-02-25T05:56:33.995Z"}
+{"level":"info","message":{"originalUrl":"/api/users/signin","requestBody":{"email":"seller4@ecom.in","password":"noob42"},"timestamp":"2024-02-25T06:45:47.096Z"},"timestamp":"2024-02-25T06:45:47.097Z"}
+{"level":"info","message":{"originalUrl":"/api/users/signin","requestBody":{"email":"seller4@ecom.in","password":"noob4"},"timestamp":"2024-02-25T06:45:52.083Z"},"timestamp":"2024-02-25T06:45:52.083Z"}

@@ -1,7 +1,12 @@
 // 1. Import Express
+// load all the environment variables in applicaion
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from 'express';
 import swagger from 'swagger-ui-express';
 import cors from 'cors';
+
 
 import productRouter from './src/features/product/product.routes.js';
 import userRouter from './src/features/user/user.routes.js';
@@ -15,6 +20,7 @@ import { connectToMongoDB } from './src/config/mongodb.js';
 
 // 2. Create a Server
 const server = express();
+
 
 // CORS policy configuration using "cors-lib"
 server.use(cors());
