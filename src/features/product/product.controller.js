@@ -53,19 +53,33 @@ export default class ProductController {
     }
   }
 
-  rateProduct(req, res) {
-    const userID = req.query.userID;
-    const productID = req.query.productID;
-    const rating = req.query.rating;
-    ProductModel.rateProduct(userID, productID, rating);
-    return res.status(200).send('Rating has been added');
+  async rateProduct(req, res) {
+    try {
+      const userID = req.userID;
+      const productID = req.query.productID;
+      const rating = req.query.rating;
+      this.productRepository.rate(userID, productID, rating);
+      return res.status(200).send('Rating has been added');
+    } catch (err) {
+      console.log(err);
+      return res.status(500).send('Something went wrong');
+    }
   }
 
-  filterProducts(req, res) {
-    const minPrice = req.query.minPrice;
-    const maxPrice = req.query.maxPrice;
-    const category = req.query.category;
-    const result = ProductModel.filter(minPrice, maxPrice, category);
-    res.status(200).send(result);
+  async filterProducts(req, res) {
+    try {
+      const minPrice = req.query.minPrice;
+      const maxPrice = req.query.maxPrice;
+      const category = req.query.category;
+      const result = await this.productRepository.filter(
+        minPrice,
+        maxPrice,
+        category
+      );
+      res.status(200).send(result);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).send('Something went wrong');
+    }
   }
 }

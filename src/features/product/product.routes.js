@@ -14,8 +14,12 @@ const productController = new ProductController();
 // localhost/api/products
 // for filter it will works as:
 // localhost:3200/api/products/filter?minPrice=10&maxPrice=20&category=Category1
-productRouter.get('/filter', productController.filterProducts);
-productRouter.post('/rate', productController.rateProduct);
+productRouter.get('/filter', (req, res) => {
+  productController.filterProducts(req, res);
+});
+productRouter.post('/rate', (req, res, next) => {
+  productController.rateProduct(req, res, next);
+});
 productRouter.get('/', (req, res) => {
   productController.getAllProducts(req, res);
 });
