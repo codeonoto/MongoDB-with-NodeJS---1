@@ -1,25 +1,56 @@
 import ProductModel from './product.model.js';
+import ProductRepository from './product.repository.js';
 
 export default class ProductController {
-  getAllProducts(req, res) {
-    const products = ProductModel.getAll();
-    res.status(200).send(products);
+  constructor() {
+    this.productRepository = new ProductRepository();
   }
 
-  addProduct(req, res) {
-    // console.log(req.body)
-    // console.log('This is a post request');
-    // res.status(200).send('Post request received');
-    const { name, price, sizes } = req.body;
-    const newProduct = {
-      name,
-      price: parseFloat(price),
-      sizes: sizes.split(','),
-      imageUrl: req.file.filename,
-    };
+  async getAllProducts(req, res) {
+    try {
+      const products = await this.productRepository.getAll();
+      res.status(200).send(products);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).send('Something went wrong');
+    }
+  }
 
-    const createdRecord = ProductModel.add(newProduct);
-    res.status(201).send(createdRecord);
+  async getOneProduct(req, res) {
+    try {
+      const id = req.params.id;
+
+      const product = await this.productRepository.get(id);
+      if (!product) {
+        throw new Error('Product Not Found');
+      } else {
+        return res.status(200).send(product);
+      }
+    } catch (err) {
+      console.log(err);
+      return res.status(500).send('Something went wrong');
+    }
+  }
+
+  async addProduct(req, res) {
+    try {
+      const { name, price, sizes } = req.body;
+      const sizesArray = sizes ? sizes.split(',') : [];
+      const newProduct = new ProductModel(
+        name,
+        null,
+        req.file.filename,
+        null,
+        parseFloat(price),
+        sizesArray
+      );
+
+      const createdRecord = await this.productRepository.add(newProduct);
+      res.status(201).send(createdRecord);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).send('Something went wrong');
+    }
   }
 
   rateProduct(req, res) {
@@ -28,16 +59,6 @@ export default class ProductController {
     const rating = req.query.rating;
     ProductModel.rateProduct(userID, productID, rating);
     return res.status(200).send('Rating has been added');
-  }
-
-  getOneProduct(req, res) {
-    const id = req.params.id;
-    const product = ProductModel.get(id);
-    if (!product) {
-      throw new Error('Product Not Found');
-    } else {
-      return res.status(200).send(product);
-    }
   }
 
   filterProducts(req, res) {

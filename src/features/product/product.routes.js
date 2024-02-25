@@ -16,13 +16,14 @@ const productController = new ProductController();
 // localhost:3200/api/products/filter?minPrice=10&maxPrice=20&category=Category1
 productRouter.get('/filter', productController.filterProducts);
 productRouter.post('/rate', productController.rateProduct);
-productRouter.get('/', productController.getAllProducts);
-productRouter.post(
-  '/',
-  upload.single('imageUrl'),
-  productController.addProduct
-);
-productRouter.get('/:id', productController.getOneProduct);
+productRouter.get('/', (req, res) => {
+  productController.getAllProducts(req, res);
+});
+productRouter.post('/', upload.single('imageUrl'), (req, res) => {
+  productController.addProduct(req, res);
+});
+productRouter.get('/:id', (req, res) => {
+  productController.getOneProduct(req, res);
+});
 
 export default productRouter;
- 

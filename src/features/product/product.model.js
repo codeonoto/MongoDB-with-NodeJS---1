@@ -1,9 +1,9 @@
-import ApplicationError  from '../../errorHandler/applicationError.js';
+import ApplicationError from '../../errorHandler/applicationError.js';
 import UserModel from '../user/user.model.js';
 
 export default class ProductModel {
-  constructor(id, name, desc, imageUrl, category, price, size) {
-    this.id = id;
+  constructor(name, desc, imageUrl, category, price, size, id) {
+    this._id = id;
     this.name = name;
     this.desc = desc;
     this.imageUrl = imageUrl;
