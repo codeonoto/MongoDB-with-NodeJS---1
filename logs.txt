@@ -23,3 +23,4 @@
 {"level":"info","message":{"originalUrl":"/api/users/signup","requestBody":{"email":"custom@ecom.in","name":"Seller User","password":"noob","type":"Seller"},"timestamp":"2024-02-24T10:47:48.458Z"},"timestamp":"2024-02-24T10:47:48.458Z"}
 {"level":"info","message":{"originalUrl":"/api/users/signup","requestBody":{"email":"custom@ecom.in","name":"Seller User","password":"noob","type":"Seller"},"timestamp":"2024-02-24T10:49:44.596Z"},"timestamp":"2024-02-24T10:49:44.597Z"}
 {"level":"info","message":{"originalUrl":"/api/users/signup","requestBody":{"email":"custom@ecom.in","name":"Seller User","password":"noob","type":"Seller"},"timestamp":"2024-02-24T10:52:29.759Z"},"timestamp":"2024-02-24T10:52:29.759Z"}
+{"level":"info","message":{"originalUrl":"/api/users/signup","requestBody":{"email":"custom@ecom.in","name":"Seller User","password":"noob","type":"Seller"},"timestamp":"2024-02-24T10:55:12.206Z"},"timestamp":"2024-02-24T10:55:12.206Z"}
